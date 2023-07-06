@@ -1,5 +1,12 @@
 {
   "Index": {
     "title": "Hello world!"
+  },
+  "About": {
+    "title": "About Us"
+  },
+  "NavBar": {
+    "home": "Home",
+    "about": "About Us"
   }
 }
