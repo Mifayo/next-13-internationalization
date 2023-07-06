@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocale } from 'next-intl';
+import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import NavBar from '@/components/NavBar';
 
@@ -10,7 +10,7 @@ export const metadata = {
   description: 'Next 13 Internationalization using Next-Intl',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params
 }: {
@@ -23,15 +23,27 @@ export default function RootLayout({
   if (params.locale !== locale) {
     notFound();
   }
+
+  let messages;
+  try {
+    messages = (await import(`@/messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+
   return (
     <html className="h-full bg-gray-100" lang={locale}>
       <body className="h-full">
-        <div className="min-h-full">
-          <NavBar />
-          <main>
-            <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{children}</div>
-          </main>
-        </div>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <div className="min-h-full">
+            <NavBar />
+            <main>
+              <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+                {children}
+              </div>
+            </main>
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
