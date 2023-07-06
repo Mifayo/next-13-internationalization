@@ -9,9 +9,8 @@
     "home": "Home",
     "about": "About Us"
   },
-  "Locale":{
+  "LocaleSwitcher": {
     "label": "Change Language",
-    "lang_en": "English",
-    "lang_fr": "French"
+    "locale": "{locale, select, en {English} fr {French} other {Unknown}}"
   }
 }

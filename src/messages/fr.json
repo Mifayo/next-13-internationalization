@@ -9,9 +9,8 @@
     "home": "Accueil",
     "about": "Qui somme nous"
   },
-  "Locale":{
+  "LocaleSwitcher": {
     "label": "Changer la langue",
-    "lang_en": "Anglais",
-    "lang_fr": "Français"
+    "locale": "{locale, select, en {Anglais} fr {Français} other {Inconnu}}"
   }
 }
