@@ -1,0 +1,16 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+  "About": {
+    "title": "About Us"
+  },
+  "NavBar": {
+    "home": "Home",
+    "about": "About Us"
+  },
+  "LocaleSwitcher": {
+    "label": "Change Language",
+    "locale": "{locale, select, en {English} fr {French} other {Unknown}}"
+  }
+}

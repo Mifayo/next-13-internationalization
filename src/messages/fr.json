@@ -1,0 +1,16 @@
+{
+  "Index": {
+    "title": "Bonjour tout le monde!"
+  },
+  "About": {
+    "title": "Qui somme nous"
+  },
+  "NavBar": {
+    "home": "Accueil",
+    "about": "Qui somme nous"
+  },
+  "LocaleSwitcher": {
+    "label": "Changer la langue",
+    "locale": "{locale, select, en {Anglais} fr {Français} other {Inconnu}}"
+  }
+}
