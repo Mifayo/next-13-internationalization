@@ -8,5 +8,10 @@
   "NavBar": {
     "home": "Home",
     "about": "About Us"
+  },
+  "Locale":{
+    "label": "Change Language",
+    "lang_en": "English",
+    "lang_fr": "French"
   }
 }
