@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import React from 'react'
-import LocaleSwitcher from './localeSwicher';
+import LocaleSwitcher from '@/components/LocaleSwicher';
 
 function NavBar() {
   const t = useTranslations('NavBar');
