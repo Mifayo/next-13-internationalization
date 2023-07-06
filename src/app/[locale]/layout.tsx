@@ -1,7 +1,9 @@
-import '@/styles/globals.css'
-
+import React from 'react'
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
+import NavBar from '@/components/navbar';
+
+import '@/styles/globals.css'
 
 export const metadata = {
   title: 'Next 13 Internationalization',
@@ -21,10 +23,16 @@ export default function RootLayout({
   if (params.locale !== locale) {
     notFound();
   }
-
   return (
-    <html lang={locale}>
-      <body>{children}</body>
+    <html className="h-full bg-gray-100" lang={locale}>
+      <body className="h-full">
+        <div className="min-h-full">
+          <NavBar />
+          <main>
+            <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{children}</div>
+          </main>
+        </div>
+      </body>
     </html>
-  );
+  )
 }
