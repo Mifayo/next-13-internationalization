@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import NavBar from '@/components/navbar';
+import NavBar from '@/components/NavBar';
 
 import '@/styles/globals.css'
 
