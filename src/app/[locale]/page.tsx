@@ -1,13 +1,10 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('Index');
   return (
     <div>
-      <p>Hello World</p>
+      <p>{t('title')}</p>
     </div>
   )
 }
